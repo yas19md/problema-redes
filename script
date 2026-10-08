@@ -1,0 +1,94 @@
+// ABRIR E FECHAR OS PROBLEMAS
+
+function mostrarProblema(id) {
+
+    const elemento = document.getElementById(id);
+
+    if (elemento.classList.contains("ativo")) {
+        elemento.classList.remove("ativo");
+    } else {
+        elemento.classList.add("ativo");
+    }
+
+}
+
+
+// SIMULAÇÃO DO PING
+
+function executarTeste(tipo) {
+
+    if (tipo === "ping") {
+
+        const resultado = document.getElementById("resultadoPing");
+
+        resultado.innerHTML = `
+            > ping 8.8.8.8<br><br>
+
+            Disparando 8.8.8.8 com 32 bytes de dados:<br><br>
+
+            Resposta de 8.8.8.8: bytes=32 tempo=25ms TTL=117<br>
+            Resposta de 8.8.8.8: bytes=32 tempo=24ms TTL=117<br>
+            Resposta de 8.8.8.8: bytes=32 tempo=26ms TTL=117<br>
+            Resposta de 8.8.8.8: bytes=32 tempo=25ms TTL=117<br><br>
+
+            Estatísticas do Ping:<br>
+            Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0<br>
+            0% de perda
+        `;
+
+    }
+
+
+    if (tipo === "dns") {
+
+        const resultado = document.getElementById("resultadoDNS");
+
+        resultado.innerHTML = `
+            > nslookup google.com<br><br>
+
+            Servidor: dns.google<br>
+            Address: 8.8.8.8<br><br>
+
+            Nome: google.com<br>
+            Endereço: 142.250.79.14<br><br>
+
+            Resultado: DNS funcionando corretamente.
+        `;
+
+    }
+
+
+    if (tipo === "ip") {
+
+        const resultado = document.getElementById("resultadoIP");
+
+        resultado.innerHTML = `
+            > ipconfig<br><br>
+
+            Adaptador Ethernet:<br><br>
+
+            Endereço IPv4: 192.168.1.10<br>
+            Máscara de Sub-rede: 255.255.255.0<br>
+            Gateway Padrão: 192.168.1.1<br><br>
+
+            Resultado: endereço IP aparentemente válido.
+        `;
+
+    }
+
+}
+
+
+// MENSAGEM NO CONSOLE
+
+console.log("Projeto de Diagnóstico de Redes carregado com sucesso!");
+
+console.log("Comandos estudados:");
+console.log("ipconfig");
+console.log("ping");
+console.log("tracert");
+console.log("nslookup");
+console.log("arp -a");
+console.log("ipconfig /release");
+console.log("ipconfig /renew");
+console.log("ipconfig /flushdns");
