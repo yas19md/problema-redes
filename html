@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diagnóstico de Redes de Computadores</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌐 Diagnóstico de Redes</h1>
+        <p>
+            Simulação de situações comuns encontradas em uma rede de computadores
+        </p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#problemas">Problemas</a>
+        <a href="#comandos">Comandos</a>
+        <a href="#testes">Testes</a>
+        <a href="#solucoes">Soluções</a>
+    </nav>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="inicio">
+            <h2>📡 Projeto de Diagnóstico de Redes</h2>
+
+            <p>
+                Este projeto apresenta situações comuns encontradas em redes
+                de computadores e mostra como identificar suas causas,
+                realizar testes e solucionar os problemas.
+            </p>
+
+            <div class="objetivo">
+                <h3>🎯 Objetivo</h3>
+
+                <p>
+                    Desenvolver a capacidade de identificar, analisar e
+                    solucionar problemas comuns de redes de computadores,
+                    utilizando procedimentos e ferramentas de diagnóstico.
+                </p>
+            </div>
+
+            <div class="cards-resumo">
+
+                <div>
+                    <span>5</span>
+                    <p>Problemas de rede</p>
+                </div>
+
+                <div>
+                    <span>5+</span>
+                    <p>Comandos de diagnóstico</p>
+                </div>
+
+                <div>
+                    <span>4</span>
+                    <p>Etapas de análise</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEMAS -->
+        <section id="problemas">
+
+            <h2>⚠️ Problemas de Rede</h2>
+
+            <p class="subtitulo">
+                Clique em cada problema para visualizar as informações.
+            </p>
+
+            <!-- PROBLEMA 1 -->
+            <article class="problema">
+
+                <h3>1️⃣ Computador sem acesso à internet</h3>
+
+                <button onclick="mostrarProblema('problema1')">
+                    Ver diagnóstico
+                </button>
+
+                <div id="problema1" class="conteudo">
+
+                    <h4>🔎 O que está acontecendo?</h4>
+
+                    <p>
+                        O computador está conectado à rede, mas não consegue
+                        acessar sites ou outros serviços da internet.
+                    </p>
+
+                    <h4>❓ Possíveis causas</h4>
+
+                    <ul>
+                        <li>Problema no roteador.</li>
+                        <li>Problema no modem.</li>
+                        <li>Configuração incorreta de IP.</li>
+                        <li>Problema no DNS.</li>
+                        <li>Cabo de rede desconectado.</li>
+                        <li>Problema no adaptador de rede.</li>
+                    </ul>
+
+                    <h4>🛠️ Como identificar?</h4>
+
+                    <p>Abra o Prompt de Comando e utilize:</p>
+
+                    <div class="codigo">
+                        ipconfig
+                    </div>
+
+                    <p>Depois teste a comunicação:</p>
+
+                    <div class="codigo">
+                        ping 8.8.8.8
+                    </div>
+
+                    <h4>✅ Como resolver?</h4>
+
+                    <ol>
+                        <li>Verificar se o cabo está conectado.</li>
+                        <li>Verificar o endereço IP.</li>
+                        <li>Reiniciar modem e roteador.</li>
+                        <li>Testar a conexão com outro dispositivo.</li>
+                        <li>Verificar o DNS.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROBLEMA 2 -->
+            <article class="problema">
+
+                <h3>2️⃣ Endereço IP incorreto</h3>
+
+                <button onclick="mostrarProblema('problema2')">
+                    Ver diagnóstico
+                </button>
+
+                <div id="problema2" class="conteudo">
+
+                    <h4>🔎 O que está acontecendo?</h4>
+
+                    <p>
+                        O computador recebeu um endereço IP que não pertence
+                        à rede correta ou não recebeu um IP válido.
+                    </p>
+
+                    <h4>❓ Possíveis causas</h4>
+
+                    <ul>
+                        <li>Servidor DHCP com problema.</li>
+                        <li>Configuração manual incorreta.</li>
+                        <li>Problema no roteador.</li>
+                        <li>Configuração de máscara incorreta.</li>
+                        <li>Problema no adaptador de rede.</li>
+                    </ul>
+
+                    <h4>🛠️ Como identificar?</h4>
+
+                    <div class="codigo">
+                        ipconfig
+                    </div>
+
+                    <p>
+                        O comando mostra o endereço IP, máscara de sub-rede
+                        e gateway padrão.
+                    </p>
+
+                    <p>Também podemos renovar o endereço:</p>
+
+                    <div class="codigo">
+                        ipconfig /release<br>
+                        ipconfig /renew
+                    </div>
+
+                    <h4>✅ Como resolver?</h4>
+
+                    <ol>
+                        <li>Verificar a configuração TCP/IP.</li>
+                        <li>Ativar o recebimento automático de IP.</li>
+                        <li>Renovar o endereço IP.</li>
+                        <li>Verificar o servidor DHCP.</li>
+                        <li>Reiniciar o roteador se necessário.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROBLEMA 3 -->
+            <article class="problema">
+
+                <h3>3️⃣ Problema de DNS</h3>
+
+                <button onclick="mostrarProblema('problema3')">
+                    Ver diagnóstico
+                </button>
+
+                <div id="problema3" class="conteudo">
+
+                    <h4>🔎 O que está acontecendo?</h4>
+
+                    <p>
+                        O computador possui conexão com a internet, mas não
+                        consegue acessar sites utilizando seus nomes, como
+                        google.com.
+                    </p>
+
+                    <h4>❓ Possíveis causas</h4>
+
+                    <ul>
+                        <li>Servidor DNS indisponível.</li>
+                        <li>Configuração de DNS incorreta.</li>
+                        <li>Problema no cache DNS.</li>
+                        <li>Falha no roteador.</li>
+                    </ul>
+
+                    <h4>🛠️ Como identificar?</h4>
+
+                    <p>Teste um endereço IP:</p>
+
+                    <div class="codigo">
+                        ping 8.8.8.8
+                    </div>
+
+                    <p>Depois teste um domínio:</p>
+
+                    <div class="codigo">
+                        ping google.com
+                    </div>
+
+                    <p>
+                        Também podemos consultar o servidor DNS utilizando:
+                    </p>
+
+                    <div class="codigo">
+                        nslookup google.com
+                    </div>
+
+                    <h4>🧹 Limpar o cache DNS</h4>
+
+                    <div class="codigo">
+                        ipconfig /flushdns
+                    </div>
+
+                    <h4>✅ Como resolver?</h4>
+
+                    <ol>
+                        <li>Verificar a configuração DNS.</li>
+                        <li>Limpar o cache DNS.</li>
+                        <li>Testar outro servidor DNS.</li>
+                        <li>Reiniciar o roteador.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROBLEMA 4 -->
+            <article class="problema">
+
+                <h3>4️⃣ Cabo de rede desconectado ou com defeito</h3>
+
+                <button onclick="mostrarProblema('problema4')">
+                    Ver diagnóstico
+                </button>
+
+                <div id="problema4" class="conteudo">
+
+                    <h4>🔎 O que está acontecendo?</h4>
+
+                    <p>
+                        O computador não consegue estabelecer uma conexão
+                        física com a rede através do cabo Ethernet.
+                    </p>
+
+                    <h4>❓ Possíveis causas</h4>
+
+                    <ul>
+                        <li>Cabo desconectado.</li>
+                        <li>Cabo quebrado.</li>
+                        <li>Conector RJ-45 danificado.</li>
+                        <li>Porta do switch com problema.</li>
+                        <li>Porta de rede do computador com defeito.</li>
+                    </ul>
+
+                    <h4>🛠️ Como identificar?</h4>
+
+                    <p>
+                        Primeiro verifique fisicamente o cabo e as luzes
+                        da porta de rede.
+                    </p>
+
+                    <p>Depois utilize:</p>
+
+                    <div class="codigo">
+                        ipconfig
+                    </div>
+
+                    <p>
+                        Também é possível verificar o estado do adaptador
+                        de rede nas configurações do sistema.
+                    </p>
+
+                    <h4>✅ Como resolver?</h4>
+
+                    <ol>
+                        <li>Reconectar o cabo.</li>
+                        <li>Testar outro cabo de rede.</li>
+                        <li>Testar outra porta do switch.</li>
+                        <li>Verificar o adaptador de rede.</li>
+                        <li>Substituir o cabo se estiver danificado.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROBLEMA 5 -->
+            <article class="problema">
+
+                <h3>5️⃣ Conflito de endereço IP</h3>
+
+                <button onclick="mostrarProblema('problema5')">
+                    Ver diagnóstico
+                </button>
+
+                <div id="problema5" class="conteudo">
+
+                    <h4>🔎 O que está acontecendo?</h4>
+
+                    <p>
+                        Dois dispositivos estão utilizando o mesmo endereço
+                        IP dentro da mesma rede.
+                    </p>
+
+                    <h4>❓ Possíveis causas</h4>
+
+                    <ul>
+                        <li>Dois computadores configurados manualmente com o mesmo IP.</li>
+                        <li>Problema no DHCP.</li>
+                        <li>Configuração de rede incorreta.</li>
+                    </ul>
+
+                    <h4>🛠️ Como identificar?</h4>
+
+                    <p>Verifique o endereço IP:</p>
+
+                    <div class="codigo">
+                        ipconfig
+                    </div>
+
+                    <p>Consulte a tabela ARP:</p>
+
+                    <div class="codigo">
+                        arp -a
+                    </div>
+
+                    <p>
+                        A tabela ARP permite observar associações entre
+                        endereços IP e endereços MAC.
+                    </p>
+
+                    <h4>✅ Como resolver?</h4>
+
+                    <ol>
+                        <li>Identificar os dispositivos envolvidos.</li>
+                        <li>Configurar IP automático.</li>
+                        <li>Renovar o endereço IP.</li>
+                        <li>Corrigir configurações manuais.</li>
+                        <li>Verificar o servidor DHCP.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- COMANDOS -->
+        <section id="comandos">
+
+            <h2>💻 Comandos de Diagnóstico</h2>
+
+            <p>
+                Os comandos abaixo podem ser utilizados no Prompt de
+                Comando do Windows para analisar problemas de rede.
+            </p>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Comando</th>
+                            <th>Finalidade</th>
+                            <th>Exemplo</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>ipconfig</td>
+                            <td>
+                                Mostra informações de configuração
+                                da rede.
+                            </td>
+                            <td>ipconfig</td>
+                        </tr>
+
+                        <tr>
+                            <td>ping</td>
+                            <td>
+                                Testa a comunicação entre dispositivos.
+                            </td>
+                            <td>ping 8.8.8.8</td>
+                        </tr>
+
+                        <tr>
+                            <td>tracert</td>
+                            <td>
+                                Mostra o caminho percorrido pelos
+                                pacotes até o destino.
+                            </td>
+                            <td>tracert google.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>nslookup</td>
+                            <td>
+                                Consulta informações sobre DNS.
+                            </td>
+                            <td>nslookup google.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>arp -a</td>
+                            <td>
+                                Exibe a tabela ARP com IPs e MACs.
+                            </td>
+                            <td>arp -a</td>
+                        </tr>
+
+                        <tr>
+                            <td>ipconfig /release</td>
+                            <td>
+                                Libera o endereço IP atual.
+                            </td>
+                            <td>ipconfig /release</td>
+                        </tr>
+
+                        <tr>
+                            <td>ipconfig /renew</td>
+                            <td>
+                                Solicita um novo endereço IP ao DHCP.
+                            </td>
+                            <td>ipconfig /renew</td>
+                        </tr>
+
+                        <tr>
+                            <td>ipconfig /flushdns</td>
+                            <td>
+                                Limpa o cache de DNS do computador.
+                            </td>
+                            <td>ipconfig /flushdns</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESTES -->
+        <section id="testes">
+
+            <h2>🧪 Simulação de Testes</h2>
+
+            <p>
+                Esta parte simula alguns testes que seriam realizados
+                durante o diagnóstico de uma rede.
+            </p>
+
+            <div class="teste">
+
+                <h3>Teste 1 - Conectividade</h3>
+
+                <button onclick="executarTeste('ping')">
+                    Executar ping
+                </button>
+
+                <div id="resultadoPing" class="resultado">
+                    Aguardando teste...
+                </div>
+
+            </div>
+
+
+            <div class="teste">
+
+                <h3>Teste 2 - DNS</h3>
+
+                <button onclick="executarTeste('dns')">
+                    Verificar DNS
+                </button>
+
+                <div id="resultadoDNS" class="resultado">
+                    Aguardando teste...
+                </div>
+
+            </div>
+
+
+            <div class="teste">
+
+                <h3>Teste 3 - Endereço IP</h3>
+
+                <button onclick="executarTeste('ip')">
+                    Verificar IP
+                </button>
+
+                <div id="resultadoIP" class="resultado">
+                    Aguardando teste...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLUÇÕES -->
+        <section id="solucoes">
+
+            <h2>🔧 Procedimento Geral de Solução</h2>
+
+            <div class="passos">
+
+                <div>
+                    <strong>1</strong>
+                    <h3>Verificar conexão física</h3>
+                    <p>
+                        Conferir cabos, conectores, portas e equipamentos.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>2</strong>
+                    <h3>Verificar IP</h3>
+                    <p>
+                        Utilizar o comando <b>ipconfig</b> para verificar
+                        as configurações.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <h3>Testar conectividade</h3>
+                    <p>
+                        Utilizar <b>ping</b> para verificar a comunicação.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <h3>Verificar DNS</h3>
+                    <p>
+                        Utilizar <b>nslookup</b> e limpar o cache DNS.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>5</strong>
+                    <h3>Corrigir o problema</h3>
+                    <p>
+                        Aplicar a solução adequada e realizar novos testes.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCUMENTAÇÃO -->
+        <section>
+
+            <h2>📚 Documentação do Projeto</h2>
+
+            <p>
+                O projeto foi desenvolvido para demonstrar procedimentos
+                básicos de diagnóstico de redes de computadores.
+            </p>
+
+            <p>
+                Durante os testes, devem ser registrados os comandos
+                utilizados, os resultados encontrados e as soluções
+                aplicadas.
+            </p>
+
+            <div class="documentacao">
+
+                <h3>📸 Prints dos testes</h3>
+
+                <p>
+                    Nesta área podem ser adicionados prints do Prompt de
+                    Comando mostrando os resultados dos testes.
+                </p>
+
+                <div class="print-area">
+                    <p>📷</p>
+                    <span>
+                        Adicione aqui os prints realizados durante o projeto.
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3> Projeto de Diagnóstico de Redes</h3>
+
+        <p>
+            Curso Técnico em Informática
+        </p>
+
+        <p>
+            Projeto desenvolvido para estudo de redes de computadores.
+        </p>
+
+        <p class="copyright">
+            © 2026 - Projeto Acadêmico
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
